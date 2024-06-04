@@ -1,0 +1,21 @@
+{
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "db": "^6.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "git": "^0.1.5",
+    "input": "^1.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "telegram": "^2.21.2",
+    "wio.db": "^4.0.22"
+  }
+}
