@@ -1,15 +1,28 @@
 {
-    "version": 2,
-    "builds": [
-        {
-        "src": "./index.js",
-        "use": "@vercel/node" 
-    }
-    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "use": "/" 
-        }
+      {
+        "src": "/[^.]+",
+        "dest": "/",
+        "status": 200,
+        "has": [
+          {
+            "type": "header",
+            "key": "authorization",
+            "value": "Basic base64:encodethis"
+          }
+        ]
+      },
+      {
+        "src": "/.*",
+        "status": 401,
+        "headers": { "www-authenticate": "Basic realm=\"staging\"" },
+        "missing": [
+          {
+            "type": "header",
+            "key": "authorization",
+            "value": "Basic base64:encodethis"
+          }
+        ]
+      }
     ]
-}
+  }
