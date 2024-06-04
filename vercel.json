@@ -3,26 +3,11 @@
       {
         "src": "/[^.]+",
         "dest": "/",
-        "status": 200,
-        "has": [
-          {
-            "type": "header",
-            "key": "authorization",
-            "value": "Basic base64:encodethis"
-          }
-        ]
+        "status": 200
       },
       {
         "src": "/.*",
-        "status": 401,
-        "headers": { "www-authenticate": "Basic realm=\"staging\"" },
-        "missing": [
-          {
-            "type": "header",
-            "key": "authorization",
-            "value": "Basic base64:encodethis"
-          }
-        ]
+        "status": 401
       }
     ]
   }
